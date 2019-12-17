@@ -5,4 +5,5 @@ Sample to send and receive jms json formatted messages using embedded spring boo
 Requirements JDK 11 Maven 3+ 
 
 To launch
+
 $ mvn test
