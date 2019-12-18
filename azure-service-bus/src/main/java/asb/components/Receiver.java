@@ -1,15 +1,15 @@
-package jms.components;
+package asb.components;
 
 
-import jms.pojo.Person;
+import asb.pojo.Person;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.CountDownLatch;
 
-@Log4j2
 @Component
+@Log4j2
 public class Receiver {
     private CountDownLatch latch = new CountDownLatch(1);
 

@@ -1,4 +1,4 @@
-package jms.pojo;
+package amq.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

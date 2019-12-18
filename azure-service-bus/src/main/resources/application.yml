@@ -1,0 +1,9 @@
+spring:
+  jms:
+    servicebus:
+      connection-string: Endpoint=https://arisbusdigitalnp001.servicebus.windows.net:5671/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=HEx9ky8yXekaELHBD5Vo2SXlH+TdAWqTJz1pvcphqrU=
+      idle-timeout: 1800000
+
+queue:
+  boot: q.GAP
+

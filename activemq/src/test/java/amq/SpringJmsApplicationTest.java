@@ -1,8 +1,8 @@
-package jms;
+package amq;
 
-import jms.components.Receiver;
-import jms.components.Sender;
-import jms.pojo.Person;
+import amq.components.Receiver;
+import amq.components.Sender;
+import amq.pojo.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = SpringJmsApplicationTest.class)
 @EnableAutoConfiguration
-@ComponentScan(basePackages = { "jms", "jms.components"})
+@ComponentScan(basePackages = { "amq", "amq.components", "amq.config"})
 @DirtiesContext
 public class SpringJmsApplicationTest {
 

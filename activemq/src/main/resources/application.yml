@@ -1,0 +1,9 @@
+spring:
+  jms:
+    servicebus:
+      connection-string: Endpoint=https://asb_host:5671/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xx
+      idle-timeout: 1800000
+
+queue:
+  boot: q.GAP
+
