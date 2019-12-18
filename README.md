@@ -14,3 +14,8 @@ Azure Service Bus
 $ cd activemq
 
 $ mvn test
+
+Expected is
+
+a.c.Sender                               : sending message='Person(name=a guy, age=30, hobbies=[foo, bar, plop])' to destination='converter.q'
+a.c.Receiver                             : received person='Person(name=a guy, age=30, hobbies=[foo, bar, plop])'
