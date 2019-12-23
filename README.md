@@ -3,15 +3,8 @@
 
 Requirements JDK 11 Maven 3+ 
 
-Azure Service Bus
---------------------
-
-* Valid Azure service bus > jms.servicebus.connection-string to be
-  adapted
-
-
-Azure Service Bus
---------------------
+Active MQ
+--------
 * Internal ActiveMQ broker URL > Sample to send and receive jms json
   formatted messages using embedded spring boot activeMQ and camel
 
@@ -75,3 +68,22 @@ To lauch Routes with Camel, I use this one
 All can be monitored thanks to AMQ admin
 
     http://localhost:8161/admin/
+
+
+
+Azure Service Bus
+--------------------
+
+* Valid Azure service bus > jms.servicebus.connection-string to be
+  adapted
+
+Endpoints :
+
+* Simple Way :
+
+    http://localhost:8080/jms/sendMsgToAzureAndConsume
+
+* Camel Way :
+
+    http://localhost:8080/camel/sendPersonInAzureQueue
+
