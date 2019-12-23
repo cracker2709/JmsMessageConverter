@@ -6,4 +6,12 @@ spring:
 
 queue:
   boot: q.GAP
+  incoming:
+    name: in-queue.q
 
+camel:
+  queue:
+    incoming:
+      name: amqp:queue:in-queue.q
+    outcoming:
+      name: amqp:queue:out-queue.q

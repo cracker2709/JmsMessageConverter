@@ -14,6 +14,7 @@
         <java.version>11</java.version>
         <lombok.version>1.18.10</lombok.version>
         <azure-service-bus.version>2.1.7</azure-service-bus.version>
+        <camel.version>2.22.0</camel.version>
     </properties>
 
     <artifactId>azure-service-bus</artifactId>
@@ -48,6 +49,42 @@
             <groupId>com.microsoft.azure</groupId>
             <artifactId>azure-servicebus-jms-spring-boot-starter</artifactId>
             <version>${azure-service-bus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-spring-boot-starter</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-amqp</artifactId>
+            <version>${camel.version}</version> <!-- use the same version as your Camel core version -->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test-spring</artifactId>
+            <version>${camel.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.qpid</groupId>
+            <artifactId>qpid-jms-client</artifactId>
+            <version>0.45.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.qpid</groupId>
+            <artifactId>proton-j</artifactId>
+            <version>0.33.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.1</version>
         </dependency>
     </dependencies>
 

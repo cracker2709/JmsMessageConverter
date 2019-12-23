@@ -17,7 +17,9 @@ public class Person {
 
     private String name;
 
-    private int age;
+    private int cash;
 
     private List<String> hobbies;
+
+    private String birthDate;
 }

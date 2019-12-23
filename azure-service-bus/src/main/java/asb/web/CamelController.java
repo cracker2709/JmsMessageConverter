@@ -1,6 +1,5 @@
 package asb.web;
 
-import asb.components.Receiver;
 import asb.components.Sender;
 import asb.pojo.Person;
 import lombok.extern.log4j.Log4j2;
@@ -16,28 +15,26 @@ import java.util.stream.Stream;
 
 @RestController
 @Log4j2
-@RequestMapping("/jms")
-public class JmsController {
+@RequestMapping("/camel")
+public class CamelController {
+    @Value("${queue.incoming.name}")
+    private String queueIn;
+
     @Autowired
     private Sender sender;
 
-    @Autowired
-    private Receiver receiver;
-
-    @Value("${queue.boot}")
-    private String gapQueue;
-
-
-    @GetMapping("/sendMsgToAzureAndConsume")
+    @GetMapping("/sendPersonInAzureQueue")
     @ResponseBody
-    public Person handleProductsFileUpload() {
+    public Person sendPersonInQueue() {
         Person person = new Person();
-        person.setName("Classic Azure Service BUS");
-        person.setCash(300);
-        Stream<String> hobbies = Stream.of("foo", "bar", "plop");
+        person.setName("CAMEL AMQ Route");
+        person.setCash(1100);
+        Stream<String> hobbies = Stream.of("doo", "test");
         person.setHobbies(hobbies.collect(Collectors.toList()));
-        sender.sendPerson(gapQueue, person);
+        person.setBirthDate("10/10/1990");
+        sender.sendPerson(queueIn, person);
         return person;
     }
+
 
 }
