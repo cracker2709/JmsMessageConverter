@@ -32,6 +32,7 @@ Expected is
 * To launch with real activeMQ
 
 I use this docker compose file
+
     version: "3"
     services:
 
