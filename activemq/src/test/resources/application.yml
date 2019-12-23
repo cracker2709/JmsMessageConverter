@@ -1,2 +1,11 @@
 queue:
-  boot: converter.q
+  name: converter.q
+  incoming:
+    name: in-queue.q
+
+camel:
+  queue:
+    incoming:
+      name: activemq:queue:in-queue.q
+    outcoming:
+      name: activemq:queue:out-queue.q

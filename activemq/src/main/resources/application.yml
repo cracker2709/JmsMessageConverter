@@ -1,3 +1,18 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+
 queue:
-  boot: q.GAP
+  name: converter.q
+  incoming:
+    name: in-queue.q
+
+camel:
+  queue:
+    incoming:
+      name: activemq:queue:in-queue.q
+    outcoming:
+      name: activemq:queue:out-queue.q
 

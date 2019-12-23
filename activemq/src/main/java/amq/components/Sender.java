@@ -17,7 +17,7 @@ public class Sender {
     @Autowired
     private MappingJackson2MessageConverter jacksonJmsMessageConverter;
 
-    public void send(String destination, Person person) {
+    public void sendPerson(String destination, Person person) {
         log.info("sending message='{}' to destination='{}'", person,
                 destination);
         jmsTemplate.convertAndSend(destination, person);
